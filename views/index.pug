@@ -1,0 +1,9 @@
+html
+    head
+        title= title
+    body
+        h1= message
+        form(method='POST' action='/api/url')
+            label(for='url') Enter URL:
+            input#name.form-control(type='text' placeholder='URL' name='url')
+            button.btn.btn-primary(type='submit') Submit
