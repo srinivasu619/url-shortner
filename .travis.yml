@@ -7,3 +7,10 @@ before_install:
 - npm install -g npm
 script:
 - npm install
+deploy:
+  provider: heroku
+  api_key:
+    secure: J1+yw4TD9aM0z4jZk8yG5yu5vCvHsOEmZmcA07eoHxelm/EizOS0lUbFMHeiea0GYkGcvlGZEYoeIxIe5xNHt1bFjIm3CvXgQSGL+zL4j0Zu7VDnGIeq6skZQzjNIhFzwW4BlrdRjxwGqdIgQvxbcE/ym2SrtOU2EPsNiBv1dSNS7jDX14cYtKg3yf5LQjulRHG9PQRJMXwz6LY8IVcM8ET5M55vSnsVShFkekL07wPTxdBHfEbqVeI7VwPMTmXpjvpOlJT7jw1sZ6T4R2EaWauYZtUfC7Us9Zi2lIa+nFB7V99W7gUbs8j0OgObXWgOeaLLaqEUwUj0W5dHVZDdnIF47DMFA9F/xpUlnsI/IvfNSjWPdOs747loI11w8spnm9sidxCpkTj5IKPa/9fkQhB78osuoPNR0LZrfYMfH6XxiuEoSmskGwyACSbjtGelGu9C3/vvQGQWeYAaiIfZg/kWoxvBt/MBHVmxahKH0Tje1v3AYfxj3xsgMuFhNEOpF3yiySg13so/mwpdCdqX42yEyRLooY2TQmUHZp3URUhTsWi9SMCJw8YgKVL0yDItUiDSX+szS3bEoh3C0x6wCKkl6/Di8yVRnZU1HYoaPedpmLuz6ICGxmVvOa+9srkj+BbmoeSCKjHWJ6SBeLrxQ6iQ5Aq8px4z79pXSrpnank=
+  app: urls-sh
+  on:
+    repo: srinivasu619/url-shortner
