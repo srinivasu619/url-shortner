@@ -5,7 +5,7 @@ const insertRecord = function(record, callback) {
     if (err) {
       throw err;
     } else {
-      const db = client.db("backendprojects");
+      const db = client.db(process.env.DB_NM);
       db.collection(process.env.COLL_NM).insertOne(record, function(err, res) {
         if (err) {
           throw err;
@@ -22,7 +22,7 @@ const fecthRecord = async function(record, callback) {
     if (err) {
       throw err;
     } else {
-      const db = client.db("backendprojects");
+      const db = client.db(process.env.DB_NM);
       db.collection(process.env.COLL_NM)
         .find(record)
         .toArray(function(err, res) {
