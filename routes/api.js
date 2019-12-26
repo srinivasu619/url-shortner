@@ -3,7 +3,7 @@ const dns = require("dns");
 const randomstring = require("randomstring");
 const { insertRecord, fecthRecord } = require("../db/db-client");
 const { urlValidator } = require("../validator");
-var router = express.Router();
+const router = express.Router();
 
 router.post("/", urlValidator, (req, res) => {
   let data = {
@@ -13,19 +13,6 @@ router.post("/", urlValidator, (req, res) => {
   try {
     insertRecord(data, function(result) {
       return res.status(201).send(result);
-    });
-  } catch (error) {
-    return res.status(500).send(error);
-  }
-});
-
-router.get("/:id", (req, res) => {
-  let data = {
-    code: req.params.id
-  };
-  try {
-    fecthRecord(data, function(result) {
-      return res.status(302).redirect(result["orignalURL"]);
     });
   } catch (error) {
     return res.status(500).send(error);
