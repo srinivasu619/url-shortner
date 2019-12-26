@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require('body-parser');
+require('dotenv').config();
 const app = express();
 const {apiRoutes} = require("./routes");
 app.use(bodyParser.urlencoded({ extended: false }))
